@@ -1,7 +1,7 @@
 # pathor
 
-[![NPM version][npm-image]][npm-url] [![Dependency Status][david-image]][david-url]
-[![License][license-image]][license-url] [![Downloads][downloads-image]][downloads-url]
+[![NPM version][npm-image]][npm-url] [![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
 > Parse parameters from a path string with template like `/user/:id` or `/user/:id(\d+)`
 >
@@ -194,8 +194,6 @@ MIT
 
 [npm-image]: https://img.shields.io/npm/v/pathor.svg?style=flat
 [npm-url]: https://npmjs.org/package/pathor
-[david-image]: http://img.shields.io/david/taoyuan/pathor.svg?style=flat
-[david-url]: https://david-dm.org/taoyuan/pathor
 [downloads-image]: http://img.shields.io/npm/dm/pathor.svg?style=flat
 [downloads-url]: https://npmjs.org/package/pathor
 [license-image]: http://img.shields.io/npm/l/pathor.svg?style=flat
