@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "@nutol/build/config/tsconfig.common.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "composite": true,
+    "importHelpers": false
+  },
+  "include": [
+    "src"
+  ]
+}
