@@ -1,22 +1,22 @@
-# pathx
+# pathor
 
 [![NPM version][npm-image]][npm-url] [![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url] [![Downloads][downloads-image]][downloads-url]
 
 > Parse parameters from a path string with template like `/user/:id` or `/user/:id(\d+)`
 >
-> TypeScript version of [pathx](https://github.com/taoyuan/pathx)
+> TypeScript version of [path-to-regex](https://github.com/lastuniverse/path-to-regex)
 
 ## Installation
 
 ```
-npm install pathx --save
+npm install pathor --save
 ```
 
 ## Usage
 
 ```javascript
-const { PathMatcher } = require('pathx');
+const { PathMatcher } = require('pathor');
 
 const matcher = new PathMatcher(path_template, options?);
 ```
@@ -183,20 +183,20 @@ let result = matcher.match('/user/123/bar/111fak/foo/test/pictures-');
 ## Participation in development
 
 ```
-https://github.com/taoyuan/pathx/issues
+https://github.com/taoyuan/pathor/issues
 ```
 
 ## License
 
 MIT
 
-[![NPM](https://nodei.co/npm/pathx.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/pathx/)
+[![NPM](https://nodei.co/npm/pathor.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/pathor/)
 
-[npm-image]: https://img.shields.io/npm/v/pathx.svg?style=flat
-[npm-url]: https://npmjs.org/package/pathx
-[david-image]: http://img.shields.io/david/taoyuan/pathx.svg?style=flat
-[david-url]: https://david-dm.org/taoyuan/pathx
-[downloads-image]: http://img.shields.io/npm/dm/pathx.svg?style=flat
-[downloads-url]: https://npmjs.org/package/pathx
-[license-image]: http://img.shields.io/npm/l/pathx.svg?style=flat
+[npm-image]: https://img.shields.io/npm/v/pathor.svg?style=flat
+[npm-url]: https://npmjs.org/package/pathor
+[david-image]: http://img.shields.io/david/taoyuan/pathor.svg?style=flat
+[david-url]: https://david-dm.org/taoyuan/pathor
+[downloads-image]: http://img.shields.io/npm/dm/pathor.svg?style=flat
+[downloads-url]: https://npmjs.org/package/pathor
+[license-image]: http://img.shields.io/npm/l/pathor.svg?style=flat
 [license-url]: LICENSE
