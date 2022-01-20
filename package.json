@@ -1,6 +1,6 @@
 {
   "name": "pathor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turn a path string such as `/user/:id` or `/user/:id(\\d+)`  into a regular expression ",
   "author": "TY <towyuan@outlook.com>",
   "license": "MIT",
@@ -28,8 +28,7 @@
     "jest": "jest",
     "posttest": "npm run lint"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@nutol/build": "^0.2.0",
     "@nutol/eslint-config": "^0.2.0",
