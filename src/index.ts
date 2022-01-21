@@ -128,7 +128,7 @@ export class PathMatcher {
 
     let offset = 0;
     let count = 0;
-    // 11. REGEXP toEnd[true]: /^[\/]?foo\/(.*?)[\/]?$/
+    // 11. REGEXP toEnd[true]:  /^[\/]?foo\/(.*?)[\/]?$/
     // 11. REGEXP toEnd[false]: /^[\/]?foo\/(.*?)([\/]|[\/]?$)/i
 
     path = path.replace(new RegExp('^' + separator + '*(.*?)' + separator + '*$'), '$1');
@@ -136,13 +136,7 @@ export class PathMatcher {
 
     path.replace(/:([a-z]\w*)(\((.*?)\))?([?*+])?/gi, (str, key, a, pat, quant, index) => {
       // console.log("-----------------------------");
-      // console.log("str:", str);
-      // console.log("key:", key);
-      // console.log("a:", a);
-      // console.log("pat:", pat);
-      // console.log("quant:", quant);
-      // console.log("index:", index);
-      // console.log("string:", string);
+      // console.log({str, key, a, pat, quant, index, string});
       count++;
 
       const isMultiple = quant === '*' || quant === '+';
@@ -152,8 +146,7 @@ export class PathMatcher {
       if (!quant && pat && /^(\[[^\[\]]+]|\([^()]+\)|\.|\\.)[*?]?$/.test(pat)) isRequired = false;
 
       const quantifier = quant ? quant : '';
-      // console.log("isMultiple", isMultiple);
-      // console.log("isRequired", isRequired);
+      // console.log({isMultiple, isRequired});
 
       // const startChar = path.charAt(index-1);
       const isStarted = !index ? true : this.separator(path.charAt(index - 1));
@@ -174,11 +167,8 @@ export class PathMatcher {
         }
       }
 
-      //console.log("isStarted", isStarted);
-      //console.log("isStopped", isStopped);
-      //console.log("isToken", isToken);
-      //console.log("this.regstr 1:", this.regstr);
-
+      // console.log({isStarted, isStopped, isToken});
+      // console.log("this.regstr 1:", this.regstr);
       const pattern = pat ? pat : notseparator + '+';
 
       const regstr = isMultiple
@@ -188,7 +178,7 @@ export class PathMatcher {
             : '((?:' + separator + '' + pattern + ')' + quantifier + ')'
           : '((?:' + notseparator + '*' + pattern + ')' + quantifier + ')'
         : isToken
-        ? isExtrude
+          ? isExtrude
           ? '(' + pattern + '?)' + quantifier
           : '(' + pattern + ')' + quantifier
         : '(' + pattern + ')' + quantifier;

@@ -180,12 +180,6 @@ let result = matcher.match('/user/123/bar/111fak/foo/test/pictures-');
 
 ... documentation in processed
 
-## Participation in development
-
-```
-https://github.com/taoyuan/pathor/issues
-```
-
 ## License
 
 MIT
