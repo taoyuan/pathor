@@ -178,7 +178,7 @@ export class PathMatcher {
             : '((?:' + separator + '' + pattern + ')' + quantifier + ')'
           : '((?:' + notseparator + '*' + pattern + ')' + quantifier + ')'
         : isToken
-          ? isExtrude
+        ? isExtrude
           ? '(' + pattern + '?)' + quantifier
           : '(' + pattern + ')' + quantifier
         : '(' + pattern + ')' + quantifier;
